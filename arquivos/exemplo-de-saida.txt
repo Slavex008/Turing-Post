@@ -1,15 +1,1 @@
-﻿//Segue abaixo um exemplo de entrada para o programa:
-
-5		//número “n” de estados (seus nomes serão considerados de 0 à n - 1)
-{0}		//estado inicial entre chaves
-{2, 4}	//conjunto de estados finais
-{a, b, c}	//alfabeto
-{a, b, c, B}	//alfabeto + símbolos auxiliares
-{			//conjunto de transições entre chaves
-    (0, B, B, D, 1),	//As transições são separadas por vírgula
-    (1, a, a, D, 1),	//Seus dados são, em ordem:
-    (1, b, b, D, 2),	//estado de origem, símbolo a ser lido, 
-    (1, c, c, D, 3),	//simbolo a ser escrito, movimento e estado de destino
-    (3, B, B, E, 4)
-}
-
+﻿
