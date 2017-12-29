@@ -45,6 +45,6 @@ def main():
     
     print("Transicoes:")
     for t in mt.transicoes:
-        print(t)
+        print(t.estadoOrigem)
     
 main()

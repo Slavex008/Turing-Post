@@ -1,1 +1,18 @@
-﻿
+﻿{a, b, c, #}		//todos os simbolos utiliza dos na MT + # (menos B)
+{			//conjunto com todas as leituras
+	(id, simbolo)	//cada leitura é formada por um 			//identificador unico (diferente entre 				//leitura e escrita), e um simbolo lido
+   
+}
+{			//conjunto com todas as escritas
+	(id, simbolo, destino) //a escrita é composta por um identificardor
+			       //unico, um simbolo e um id de destino
+	(1, #, 2)	//O id de valor 1 pertence à primeira escrita do 				//simbolo #
+			//O identificador de destino pode assumir os mesmos 				//que um identificador de destino de um 			//desvio, definido logo abiaxo
+	
+}
+{			 //conjunto com todos os desvios
+	(origem, destino)//o desvio é composto por uma leitura de  				 //origem e um identificador de destino
+			 //podendo tal identificador ser de escrita ou 	 				 //leitura, ou, ainda, de um ponto de aceitação
+			 //(id = "aceita") ou rejeição (id = "rejeita")
+}
+
