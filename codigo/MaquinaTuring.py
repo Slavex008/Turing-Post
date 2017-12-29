@@ -1,7 +1,7 @@
 # -*- coding: UTF-8 -*-
 
-from codigo.Transicao import Transicao
-from codigo.Estado import Estado
+from Transicao import Transicao
+from Estado import Estado
 
 
 class MaquinaTuring:
@@ -49,7 +49,7 @@ class MaquinaTuring:
             #se o alfabeto nao for um subconjunto de todos os simbolos, gera erro
             if(letra not in self.todosSimbolos):
                 return None
-            alfabeto[letra] = letra
+            self.alfabeto[letra] = letra
         
         self.transicoes = []
         #cria as transicoes e as insere na lista de transicoes
@@ -60,8 +60,8 @@ class MaquinaTuring:
                 or ((transicao[3] != 'D') and (transicao[3] != 'E'))):
                 return None
             
-            self.transicoes.add(Transicao(self.estados[transicao[0]], transicao[1], transicao[2],
-                                            transicao[3], self.estado[transicao[4]]))
+            self.transicoes.append(Transicao(self.estados[transicao[0]], transicao[1], transicao[2],
+                                            transicao[3], self.estados[transicao[4]]))
             
         
         

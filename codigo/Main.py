@@ -2,6 +2,7 @@
 import sys
 
 from Leitor import Leitor
+from MaquinaTuring import MaquinaTuring
 
 def main():
     if(len(sys.argv) != 3):
@@ -15,12 +16,35 @@ def main():
 
     leituraMT = Leitor(entrada)
     
-    print(leituraMT.estados)
-    print(leituraMT.estadoInicial)
-    print(leituraMT.estadosFinais)
-    print(leituraMT.alfabeto)
-    print(leituraMT.todosSimbolos)
-    for t in leituraMT.transicoes:
+    mt = MaquinaTuring(leituraMT.estadoInicial, leituraMT.estadosFinais, leituraMT.estados,
+                       leituraMT.transicoes, leituraMT.alfabeto, leituraMT.todosSimbolos)
+    
+    print("Estados:")
+    for estado in mt.estados:
+        print(mt.estados[estado])
+        print(mt.estados[estado].nome)
+    
+    print()
+    
+    print("Estado inicial:")
+    print(mt.estadoInicial)
+    print(mt.estadoInicial.nome)
+    print()
+    
+    print("Estados finais:")
+    for estado in mt.estadosFinais:
+        print(mt.estadosFinais[estado])
+        print(mt.estadosFinais[estado].nome)
+    
+    print()
+    print("Alfabeto")
+    print(mt.alfabeto)
+    print("Todos os simbolos:")
+    print(mt.todosSimbolos)
+    print()
+    
+    print("Transicoes:")
+    for t in mt.transicoes:
         print(t)
     
 main()

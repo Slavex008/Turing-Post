@@ -37,6 +37,9 @@ class Leitor:
     def leEstadoInicial(self):
         aux = re.compile("{(\d+)}")
         self.estadoInicial = aux.findall(self.linhas[1])
+        if (len(self.estadoInicial) != 1):
+            return None
+        self.estadoInicial = self.estadoInicial[0]
     
     def leEstadosFinais(self):
         aux = re.compile("(\d+)")
