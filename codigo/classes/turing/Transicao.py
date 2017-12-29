@@ -1,5 +1,5 @@
 # -*- coding: UTF-8 -*-
-from Estado import Estado
+from classes.turing.Estado import Estado
 class Transicao(object):
     estadOrigem = None
     estadoDestino = None

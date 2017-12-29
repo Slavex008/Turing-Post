@@ -1,4 +1,4 @@
-﻿{a, b, c, #}		//todos os simbolos utiliza dos na MT + # (menos B)
+﻿{a, b, c, B, #}		//todos os simbolos utiliza dos na MT + #
 {			//conjunto com todas as leituras
 	(id, simbolo)	//cada leitura é formada por um 			//identificador unico (diferente entre 				//leitura e escrita), e um simbolo lido
    

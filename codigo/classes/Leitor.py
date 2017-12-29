@@ -1,6 +1,9 @@
 # -*- coding: UTF-8 -*-
 import re
 
+from excecoes.CriacaoTuringException import CriacaoTuringException
+
+
 class Leitor:
     arquivo = None
     linhas = None
@@ -38,7 +41,7 @@ class Leitor:
         aux = re.compile("{(\d+)}")
         self.estadoInicial = aux.findall(self.linhas[1])
         if (len(self.estadoInicial) != 1):
-            return None
+            raise CriacaoTuringException("ERRO: Ha mais de um estado inicial definido")
         self.estadoInicial = self.estadoInicial[0]
     
     def leEstadosFinais(self):

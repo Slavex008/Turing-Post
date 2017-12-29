@@ -1,10 +1,12 @@
 # -*- coding: UTF-8 -*-
 
-from Transicao import Transicao
-from Estado import Estado
+from classes.turing.Transicao import Transicao
+from classes.turing.Estado import Estado
+
+from excecoes.CriacaoTuringException import CriacaoTuringException
 
 
-class MaquinaTuring:
+class Turing:
     estadoInicial = None
     estadosFinais = None
     estados = None      #conjunto de todos os estados
@@ -25,7 +27,7 @@ class MaquinaTuring:
         
         #se o estado inicial nao pertencer ao conjunto de estados, gera erro
         if(estadoInicial not in self.estados):
-            return None
+            raise CriacaoTuringException("ERRO: O estado inicial nao esta contido nos estados definidos")
         
         self.estadoInicial = self.estados[estadoInicial]
         
@@ -35,7 +37,7 @@ class MaquinaTuring:
         for ef in estadosFinais:
             # se algum estado final nao pertencer ao conjunto de estados, gera erro
             if((ef not in self.estados) or (ef in self.estadosFinais)):
-                return None
+                raise CriacaoTuringException("ERRO: Algum estado final nao esta contido nos estados definidos")
             self.estadosFinais[ef] = self.estados[ef]
 
         #cria um dicionario com os simbolos de entrada da MT
@@ -48,7 +50,7 @@ class MaquinaTuring:
         for letra in alfabeto:
             #se o alfabeto nao for um subconjunto de todos os simbolos, gera erro
             if(letra not in self.todosSimbolos):
-                return None
+                raise  CriacaoTuringException("ERRO: Algum simbolo do alfabeto nao foi inserido no conjunto de todos os simbolos")
             self.alfabeto[letra] = letra
         
         self.transicoes = []
@@ -58,10 +60,9 @@ class MaquinaTuring:
             if(((transicao[0] not in self.estados) or (transicao[4] not in self.estados))
                 or (transicao[1] not in self.todosSimbolos) or (transicao[2] not in self.todosSimbolos)
                 or ((transicao[3] != 'D') and (transicao[3] != 'E'))):
-                return None
+                raise CriacaoTuringException("ERRO: Alguma transiçao nao esta definida corretamente!")
             
             self.transicoes.append(Transicao(self.estados[transicao[0]], transicao[1], transicao[2],
                                             transicao[3], self.estados[transicao[4]]))
             
-        
         
