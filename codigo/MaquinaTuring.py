@@ -1,8 +1,10 @@
-from src.Transicao import Transicao
-from src.Estado import Estado
+# -*- coding: UTF-8 -*-
+
+from codigo.Transicao import Transicao
+from codigo.Estado import Estado
 
 
-class Turing:
+class MaquinaTuring:
     estadoInicial = None
     estadosFinais = None
     estados = None      #conjunto de todos os estados

@@ -1,3 +1,5 @@
+# -*- coding: UTF-8 -*-
+from codigo.Estado import Estado
 class Transicao(object):
     estadOrigem = None
     estadoDestino = None
