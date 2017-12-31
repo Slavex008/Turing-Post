@@ -21,8 +21,14 @@ class Post:
         self.leituras = {}
         self.escritas = {}
         self.desvios = []
-        self.escritas['1'] = Escrita('1', self.alfabeto['#'], '2')
         
+    def adicionaEscrita(self, escrita):
+        self.escritas[escrita.id] = escrita
+    
+    def adicionarLeitura(self, leitura):
+        self.leituras[leitura.id] = leitura
+    
+    def adicionarDesvio(self, desvio):
+        self.desvios.append(desvio)
         
-    def addComponente(self, componente):
-        self.componentes[componente.id] = componente
+    

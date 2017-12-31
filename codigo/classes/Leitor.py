@@ -17,6 +17,7 @@ class Leitor:
     def __init__(self, arquivo):
         self.arquivo = open(arquivo, "r")
         self.leDados()
+        self.arquivo.close()
         
     def leDados(self):
         self.linhas = self.arquivo.read().splitlines()

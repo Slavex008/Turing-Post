@@ -2,10 +2,9 @@
 import sys
 from classes.Leitor import Leitor
 from classes.turing.Turing import Turing
-
 from excecoes.CriacaoTuringException import CriacaoTuringException
-
 from classes.Conversor import Conversor
+from classes.Escritor import Escritor
 
 
 def main():
@@ -25,7 +24,8 @@ def main():
                            leituraMT.transicoes, leituraMT.alfabeto, leituraMT.todosSimbolos)
         
         conversor = Conversor(mt)
-        print(conversor.post.alfabeto)
+        escritor = Escritor(saida, conversor.post)
+        
         
         # print("Estados:")
         # for estado in mt.estados:
