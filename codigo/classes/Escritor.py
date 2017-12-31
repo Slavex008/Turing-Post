@@ -18,7 +18,7 @@ class Escritor:
         
         leituras = "{\n"
         for leitura in post.leituras:
-            leituras += "   (" + post.leituras[leitura].id + "), \n"
+            leituras += "\t(" + post.leituras[leitura].id + "), \n"
         
         leituras = leituras[:-3]
         leituras += "\n}"
@@ -27,7 +27,7 @@ class Escritor:
         
         escritas = "{\n"
         for escrita in post.escritas:
-            escritas += "   (" + post.escritas[escrita].id + ", " + \
+            escritas += "\t(" + post.escritas[escrita].id + ", " + \
                             post.escritas[escrita].simbolo + ", " + \
                             post.escritas[escrita].destino.id + "), \n"
         
@@ -38,7 +38,7 @@ class Escritor:
         
         desvios = "{\n"
         for desvio in post.desvios:
-            desvios += "    (" + desvio.origem.id + \
+            desvios += "\t(" + desvio.origem.id + \
                         ", " + desvio.simbolo + \
                         ", " + desvio.destino.id + "), \n"
         

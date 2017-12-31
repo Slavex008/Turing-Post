@@ -35,9 +35,12 @@ class Conversor:
             if(transicao.estadoOrigem == transicao.estadoDestino):
                 self.criaEquivalentePost(transicao, leitura, leitura)
                 self.converter(estadoAtual)
-                return transicao.estadoDestino
-            # if(transicao.estadoDestino.equivalentePost != None)
-        
+                return
+            if(transicao.estadoDestino.equivalentePost == None):
+                self.converter(transicao.estadoDestino)
+            self.criaEquivalentePost(transicao, leitura, transicao.estadoDestino.equivalentePost)
+            return
+                
         self.converter(self.getOrigemTransicaoNaoUsada())
             
     
