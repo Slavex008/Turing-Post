@@ -20,8 +20,16 @@ class Conversor:
             turing.estados[estado].equivalentePost = None
         for transicao in self.turing.transicoes:
             transicao.usada = False
-            
         self.converter(self.turing.estadoInicial)
+        for estado in self.turing.estadosFinais:
+            equivalente = self.turing.estados[estado].equivalentePost
+            for desvio in self.post.desvios:
+                if((desvio.origem.id == equivalente.id) and 
+                    (desvio.destino == self.post.rejeicao)):
+                    desvio.destino = self.post.aceitacao
+            
+        
+        
         
     def converter(self, estadoAtual):
         if(estadoAtual == None):
@@ -63,7 +71,10 @@ class Conversor:
                                        destinoEscrita)
             if(leitura == destinoEscrita):
                 return retorno
+            
             return None
+    
+    
     
     # cria o desvio e a instruçao de escrita e os adiciona, junto a leitura, a maquina de POST
     def criaMovimentoDireita(self, leitura, simboloLido, simboloEscrito, destinoEscrita):
@@ -74,10 +85,11 @@ class Conversor:
         self.post.adicionarEscrita(escrita)
         self.post.adicionarDesvio(desvio)
 
+
+
     #cria um conjunto de instruçoes de escrita e leitura, alem de desvios,
     #para simular o movimento a esquerda
     def criaMovimentoEsquerda(self, origem, simboloLido, simboloEscrito, destinoEscrita):
-        
         #cria instrucoes e desvios auxiliares que irao encontrar um caracter
         # utilizado como identificador
         destinoBase = self.criaEstadosIdentificadores(destinoEscrita, simboloEscrito)
@@ -99,6 +111,8 @@ class Conversor:
             return escritaIdentificador
             
         return None
+  
+  
   
     def criaEstadosIdentificadores(self, destinoEscrita, simboloEscrito):
         leituraBase = Leitura(str(self.contadorID))

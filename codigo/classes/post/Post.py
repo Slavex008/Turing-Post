@@ -34,10 +34,15 @@ class Post:
         if (leitura.id in self.leituras):
             return
         self.leituras[leitura.id] = leitura
+        for letra in self.alfabeto:
+            self.desvios.append(Desvio(self.leituras[leitura.id],
+                                       letra, self.rejeicao))
     
     def adicionarDesvio(self, desvio):
-        # if (desvio.origem.id == '4'):
-        #     print("euDesvio")
+        for d in self.desvios:
+            if((desvio.origem.id == d.origem.id) and (desvio.simbolo == d.simbolo)):
+                d.destino = desvio.destino
+                return
         self.desvios.append(desvio)
         
     
