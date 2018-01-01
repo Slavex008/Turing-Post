@@ -26,18 +26,18 @@ class Post:
         self.desvios = []
         
     def adicionarEscrita(self, escrita):
-        if(escrita.id == '4'):
-            print("euEscrita")
+        if(escrita.id in self.escritas):
+            return
         self.escritas[escrita.id] = escrita
     
     def adicionarLeitura(self, leitura):
-        if (leitura.id == '4'):
-            print("euLeitura")
+        if (leitura.id in self.leituras):
+            return
         self.leituras[leitura.id] = leitura
     
     def adicionarDesvio(self, desvio):
-        if (desvio.origem.id == '4'):
-            print("euDesvio")
+        # if (desvio.origem.id == '4'):
+        #     print("euDesvio")
         self.desvios.append(desvio)
         
     
