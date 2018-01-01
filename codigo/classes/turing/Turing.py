@@ -57,7 +57,7 @@ class Turing:
                 raise  CriacaoTuringException("ERRO: Algum simbolo do alfabeto nao " +
                                               "foi inserido no conjunto de todos os simbolos")
             self.alfabeto[letra] = letra
-        
+        print(self.alfabeto)
         self.transicoes = []
         #cria as transicoes e as insere na lista de transicoes
         for transicao in transicoes:

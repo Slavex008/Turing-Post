@@ -6,6 +6,8 @@ from excecoes.CriacaoTuringException import CriacaoTuringException
 from classes.Conversor import Conversor
 from classes.Escritor import Escritor
 
+from excecoes.ConvercaoException import ConversaoException
+
 
 def main():
     try:
@@ -55,9 +57,11 @@ def main():
         # for t in mt.transicoes:
         #     print(t.estadoOrigem)
         #
-    except CriacaoTuringException as cte:
+    except CriacaoTuringException as e:
         print("Ocorreu um erro na criacao da maquina de Turing")
-        print(cte.mensagem)
-        
+        print(e.mensagem)
+    except ConversaoException as e:
+        print("Ocorreu um erro na conversao da maquina de Turing")
+        print(e.mensagem)
     
 main()
