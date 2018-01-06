@@ -26,37 +26,8 @@ def main():
                            leituraMT.transicoes, leituraMT.alfabeto, leituraMT.todosSimbolos)
         
         conversor = Conversor(mt)
-        escritor = Escritor(saida, conversor.post)
+        Escritor(saida, conversor.post)
         
-        
-        # print("Estados:")
-        # for estado in mt.estados:
-        #     print(mt.estados[estado])
-        #     print(mt.estados[estado].nome)
-        #
-        # print()
-        #
-        # print("Estado inicial:")
-        # print(mt.estadoInicial)
-        # print(mt.estadoInicial.nome)
-        # print()
-        #
-        # print("Estados finais:")
-        # for estado in mt.estadosFinais:
-        #     print(mt.estadosFinais[estado])
-        #     print(mt.estadosFinais[estado].nome)
-        #
-        # print()
-        # print("Alfabeto")
-        # print(mt.alfabeto)
-        # print("Todos os simbolos:")
-        # print(mt.todosSimbolos)
-        # print()
-        #
-        # print("Transicoes:")
-        # for t in mt.transicoes:
-        #     print(t.estadoOrigem)
-        #
     except CriacaoTuringException as e:
         print("Ocorreu um erro na criacao da maquina de Turing")
         print(e.mensagem)

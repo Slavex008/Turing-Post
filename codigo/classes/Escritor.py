@@ -7,6 +7,7 @@ class Escritor:
         
     def formataMaquina(self, post):
         texto = ""
+        
         alfabeto = "{"
         for letra in post.alfabeto:
             alfabeto += letra + ", "
@@ -15,7 +16,7 @@ class Escritor:
         alfabeto += "}"
         
         texto += alfabeto + "\n"
-        
+        texto += "(" + self.post.partida[0] + ", " + self.post.partida[1] + ")\n"
         leituras = "{\n"
         for leitura in post.leituras:
             leituras += "\t(" + post.leituras[leitura].id + "), \n"

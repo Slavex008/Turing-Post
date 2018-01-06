@@ -2,11 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0614a18a-7eb6-472d-917e-c2c5fd15fd9c" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/arquivos/entradas/entrada5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/arquivos/saidas/saida5" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/arquivos/entradas/entrada1" afterPath="$PROJECT_DIR$/arquivos/entradas/entrada1" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/arquivos/entradas/entrada2" afterPath="$PROJECT_DIR$/arquivos/entradas/entrada2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/arquivos/entradas/entrada3" afterPath="$PROJECT_DIR$/arquivos/entradas/entrada3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/arquivos/entradas/entrada4" afterPath="$PROJECT_DIR$/arquivos/entradas/entrada4" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/arquivos/exemplo-de-entrada.txt" afterPath="$PROJECT_DIR$/arquivos/exemplo-de-entrada.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/arquivos/exemplo-de-saida.txt" afterPath="$PROJECT_DIR$/arquivos/exemplo-de-saida.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/arquivos/saidas/saida1" afterPath="$PROJECT_DIR$/arquivos/saidas/saida1" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/arquivos/saidas/saida2" afterPath="$PROJECT_DIR$/arquivos/saidas/saida2" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/arquivos/saidas/saida3" afterPath="$PROJECT_DIR$/arquivos/saidas/saida3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/arquivos/saidas/saida4" afterPath="$PROJECT_DIR$/arquivos/saidas/saida4" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codigo/Main.py" afterPath="$PROJECT_DIR$/codigo/Main.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codigo/classes/Conversor.py" afterPath="$PROJECT_DIR$/codigo/classes/Conversor.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codigo/classes/Escritor.py" afterPath="$PROJECT_DIR$/codigo/classes/Escritor.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codigo/classes/post/Leitura.py" afterPath="$PROJECT_DIR$/codigo/classes/post/Leitura.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codigo/classes/post/Post.py" afterPath="$PROJECT_DIR$/codigo/classes/post/Post.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codigo/classes/turing/Turing.py" afterPath="$PROJECT_DIR$/codigo/classes/turing/Turing.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,11 +34,21 @@
       <file leaf-file-name="Conversor.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/codigo/classes/Conversor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="26" column="60" lean-forward="false" selection-start-line="26" selection-start-column="60" selection-end-line="26" selection-end-column="60" />
+            <state relative-caret-position="288">
+              <caret line="76" column="12" lean-forward="false" selection-start-line="71" selection-start-column="12" selection-end-line="76" selection-end-column="12" />
               <folding>
-                <element signature="e#0#34#0" expanded="true" />
+                <element signature="e#0#85#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Transicao.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codigo/classes/turing/Transicao.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="18">
+              <caret line="1" column="30" lean-forward="false" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="30" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -32,8 +56,20 @@
       <file leaf-file-name="Main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/codigo/Main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="5" lean-forward="false" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+            <state relative-caret-position="314">
+              <caret line="29" column="8" lean-forward="false" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
+              <folding>
+                <element signature="e#24#34#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Escritor.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codigo/classes/Escritor.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="18" column="17" lean-forward="false" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -42,8 +78,8 @@
       <file leaf-file-name="Post.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/codigo/classes/post/Post.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6">
-              <caret line="19" column="7" lean-forward="false" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
+            <state relative-caret-position="278">
+              <caret line="38" column="8" lean-forward="false" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="8" />
               <folding>
                 <element signature="e#0#46#0" expanded="true" />
               </folding>
@@ -54,8 +90,8 @@
       <file leaf-file-name="Turing.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/codigo/classes/turing/Turing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1260">
-              <caret line="73" column="72" lean-forward="true" selection-start-line="73" selection-start-column="72" selection-end-line="73" selection-end-column="72" />
+            <state relative-caret-position="242">
+              <caret line="58" column="40" lean-forward="false" selection-start-line="58" selection-start-column="40" selection-end-line="58" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -64,8 +100,8 @@
       <file leaf-file-name="Escrita.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/codigo/classes/post/Escrita.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" column="20" lean-forward="false" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+            <state relative-caret-position="144">
+              <caret line="8" column="30" lean-forward="false" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -74,8 +110,8 @@
       <file leaf-file-name="Leitura.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/codigo/classes/post/Leitura.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="20" lean-forward="false" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+            <state relative-caret-position="90">
+              <caret line="5" column="8" lean-forward="false" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -96,14 +132,23 @@
       <find>arq</find>
       <find>add</find>
       <find>raise</find>
-      <find>print</find>
       <find>estados</find>
       <find>for</find>
       <find>contadorID</find>
       <find>Desvio(</find>
       <find>escrita</find>
       <find>destinoEs</find>
+      <find>desvio</find>
+      <find>destino.dest</find>
+      <find>identificador</find>
+      <find>print</find>
+      <find>Leitura(</find>
       <find>destinoEscrita</find>
+      <find>None</find>
+      <find>equivalentePost</find>
+      <find>leituraBase</find>
+      <find>destinoB</find>
+      <find>transicao</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -140,13 +185,13 @@
         <option value="$PROJECT_DIR$/codigo/classes/post/AceitaRejeita.py" />
         <option value="$PROJECT_DIR$/codigo/classes/Leitor.py" />
         <option value="$PROJECT_DIR$/codigo/classes/post/Desvio.py" />
-        <option value="$PROJECT_DIR$/codigo/classes/Escritor.py" />
         <option value="$PROJECT_DIR$/codigo/excecoes/ConvercaoException.py" />
-        <option value="$PROJECT_DIR$/codigo/Main.py" />
-        <option value="$PROJECT_DIR$/codigo/classes/turing/Turing.py" />
         <option value="$PROJECT_DIR$/codigo/classes/post/Escrita.py" />
         <option value="$PROJECT_DIR$/codigo/classes/post/Leitura.py" />
+        <option value="$PROJECT_DIR$/codigo/classes/turing/Turing.py" />
+        <option value="$PROJECT_DIR$/codigo/Main.py" />
         <option value="$PROJECT_DIR$/codigo/classes/post/Post.py" />
+        <option value="$PROJECT_DIR$/codigo/classes/Escritor.py" />
         <option value="$PROJECT_DIR$/codigo/classes/Conversor.py" />
       </list>
     </option>
@@ -383,7 +428,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#34#0" expanded="true" />
+            <element signature="e#0#85#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -392,7 +437,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
-          <folding />
+          <folding>
+            <element signature="e#24#34#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -578,13 +625,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/codigo/classes/turing/Transicao.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="15" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/codigo/classes/turing/Estado.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -606,42 +646,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/codigo/Main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="5" lean-forward="false" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codigo/classes/Escritor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="34" column="25" lean-forward="false" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codigo/classes/turing/Turing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1260">
-          <caret line="73" column="72" lean-forward="true" selection-start-line="73" selection-start-column="72" selection-end-line="73" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codigo/classes/post/Escrita.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="20" lean-forward="false" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/codigo/classes/post/AceitaRejeita.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="19" column="4" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -653,18 +661,60 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/codigo/classes/post/Escrita.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="30" lean-forward="false" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codigo/classes/turing/Transicao.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="30" lean-forward="false" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codigo/classes/turing/Turing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="58" column="40" lean-forward="false" selection-start-line="58" selection-start-column="40" selection-end-line="58" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codigo/Main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="29" column="8" lean-forward="false" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
+          <folding>
+            <element signature="e#24#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codigo/classes/Escritor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="17" lean-forward="false" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/codigo/classes/post/Leitura.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="20" lean-forward="false" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+        <state relative-caret-position="90">
+          <caret line="5" column="8" lean-forward="false" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/codigo/classes/post/Post.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6">
-          <caret line="19" column="7" lean-forward="false" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
+        <state relative-caret-position="278">
+          <caret line="38" column="8" lean-forward="false" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="8" />
           <folding>
             <element signature="e#0#46#0" expanded="true" />
           </folding>
@@ -673,10 +723,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/codigo/classes/Conversor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="26" column="60" lean-forward="false" selection-start-line="26" selection-start-column="60" selection-end-line="26" selection-end-column="60" />
+        <state relative-caret-position="288">
+          <caret line="76" column="12" lean-forward="false" selection-start-line="71" selection-start-column="12" selection-end-line="76" selection-end-column="12" />
           <folding>
-            <element signature="e#0#34#0" expanded="true" />
+            <element signature="e#0#85#0" expanded="true" />
           </folding>
         </state>
       </provider>

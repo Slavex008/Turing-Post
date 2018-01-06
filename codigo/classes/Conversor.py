@@ -1,8 +1,8 @@
+from aptdaemon.worker.aptworker import trans_only_installs_pkgs_from_high_trust_repos
 from classes.post.Post import Post
 from classes.post.Leitura import Leitura
 from classes.post.Escrita import Escrita
 from classes.post.Desvio import Desvio
-
 from excecoes.ConvercaoException import ConversaoException
 
 
@@ -21,12 +21,43 @@ class Conversor:
         for transicao in self.turing.transicoes:
             transicao.usada = False
         self.converter(self.turing.estadoInicial)
+        
+        for desvio in self.post.desvios:
+            if (desvio.destino == self.post.rejeicao or desvio.destino == self.post.aceitacao):
+                if(desvio.simbolo == self.post.identificadorEsquerda):
+                    s = self.buscaDesvioPorDestino(desvio.origem).simbolo
+                else:
+                    s = desvio.simbolo
+                escrita = Escrita(str(self.contadorID), s, desvio.destino)
+                self.incrementarContador()
+                self.post.adicionarEscrita(escrita)
+                desvio.destino = escrita
+        
+        
         for estado in self.turing.estadosFinais:
             equivalente = self.turing.estados[estado].equivalentePost
-            for desvio in self.post.desvios:
-                if((desvio.origem.id == equivalente.id) and 
-                    (desvio.destino == self.post.rejeicao)):
-                    desvio.destino = self.post.aceitacao
+            print("------------")
+            print(estado)
+            print(equivalente.id)
+            if(equivalente.id in self.post.leituras):
+                for desvio in self.post.desvios:
+                    if((desvio.origem.id == equivalente.id)):
+                        if((desvio.destino.destino == self.post.rejeicao)):
+                            desvio.destino.destino = self.post.aceitacao
+            if(equivalente.id in self.post.escritas):
+                leituraBase = equivalente.destino.destino
+                for letra in self.post.alfabeto:
+                    origem = self.buscaDesvioPorSimboloEOrigem(letra, leituraBase).destino
+                    desvio = self.buscaDesvioPorSimboloEOrigem(self.post.identificadorEsquerda,
+                                                               origem)
+                    if(desvio.destino.destino == self.post.rejeicao):
+                        desvio.destino.destino = self.post.aceitacao
+                    
+        
+        escrita = Escrita('1', '#', self.turing.estadoInicial.equivalentePost)
+        self.post.adicionarEscrita(escrita)
+        self.post.criaPartida(escrita)
+        
             
         
         
@@ -34,14 +65,19 @@ class Conversor:
     def converter(self, estadoAtual):
         if(estadoAtual == None):
             return None
-        
         transicao = self.encontraProximaTransicao(estadoAtual)
         if (estadoAtual.equivalentePost == None):
             estadoAtual.equivalentePost = Leitura(str(self.contadorID))
             self.incrementarContador()
+            if(transicao == None):
+                self.post.adicionarLeitura(estadoAtual.equivalentePost)
+                if(estadoAtual.nome in self.turing.estadosFinais):
+                    for letra in self.post.alfabeto:
+                        desvio = Desvio(estadoAtual.equivalentePost, letra, self.post.aceitacao)
+                        self.post.adicionarDesvio(desvio)
+            
         # se houver retorno, significa que a transicao retornada deve ser transformada para POST
         if(transicao != None):
-            
             leitura = estadoAtual.equivalentePost
             if(transicao.estadoOrigem == transicao.estadoDestino):
                 retorno = self.criaEquivalentePost(transicao, leitura, leitura)
@@ -51,24 +87,21 @@ class Conversor:
                 return
             if(transicao.estadoDestino.equivalentePost == None):
                 self.converter(transicao.estadoDestino)
-            self.criaEquivalentePost(transicao, leitura, transicao.estadoDestino.equivalentePost)
-            
-            return
                 
+            self.criaEquivalentePost(transicao, leitura, transicao.estadoDestino.equivalentePost)
+            return
         self.converter(self.getOrigemTransicaoNaoUsada())
             
     
     # Cria um conjunto de desvios, leituras e escritas equivalentes a transicao
     def criaEquivalentePost(self, transicao, leitura, destinoEscrita):
-        print(self.contadorID)
-        print(destinoEscrita.id)
         if(transicao.movimento == 'D'):
             self.criaMovimentoDireita(leitura, transicao.simboloLido, transicao.simboloEscrito,
                                       destinoEscrita)
             return
         if(transicao.movimento == 'E'):
-            retorno = self.criaMovimentoEsquerda(leitura, transicao.simboloLido, transicao.simboloEscrito,
-                                       destinoEscrita)
+            retorno = self.criaMovimentoEsquerda(leitura, transicao.simboloLido,
+                                                 transicao.simboloEscrito, destinoEscrita)
             if(leitura == destinoEscrita):
                 return retorno
             
@@ -79,6 +112,7 @@ class Conversor:
     # cria o desvio e a instruçao de escrita e os adiciona, junto a leitura, a maquina de POST
     def criaMovimentoDireita(self, leitura, simboloLido, simboloEscrito, destinoEscrita):
         escrita = Escrita(str(self.contadorID), simboloEscrito, destinoEscrita)
+        print(self.contadorID)
         self.incrementarContador()
         desvio = Desvio(leitura, simboloLido, escrita)
         self.post.adicionarLeitura(leitura)
@@ -101,15 +135,16 @@ class Conversor:
         self.incrementarContador()
         self.post.adicionarEscrita(escritaIdentificador)
         
+        
         if (origem.id != destinoEscrita.id):
             desvio = Desvio(origem, simboloLido, escritaIdentificador)
             self.post.adicionarDesvio(desvio)
         else:
             desvioCujoDestinoEhOrigem = self.buscaDesvioPorSimboloEOrigem(simboloLido, destinoBase)
-            desvio = Desvio(desvioCujoDestinoEhOrigem.destino, self.post.identificadorEsquerda, escritaIdentificador)
+            desvio = Desvio(desvioCujoDestinoEhOrigem.destino, self.post.identificadorEsquerda,
+                            escritaIdentificador)
             self.post.adicionarDesvio(desvio)
             return escritaIdentificador
-            
         return None
   
   
@@ -118,7 +153,6 @@ class Conversor:
         leituraBase = Leitura(str(self.contadorID))
         self.incrementarContador()
         self.post.adicionarLeitura(leituraBase)
-        
         vetorLeiturasAux = {}
         for letra in self.post.alfabeto:
             leitura = Leitura(str(self.contadorID))
@@ -148,9 +182,16 @@ class Conversor:
                     for transicao in self.turing.transicoes:
                         if(transicao.estadoOrigem == self.equivalenteTuring(destinoEscrita)):
                             if(transicao.simboloLido == letraLeituraAux):
-                                desvio = Desvio(vetorLeiturasAux[letraLeituraAux], self.post.identificadorEsquerda,
+                                desvio = Desvio(vetorLeiturasAux[letraLeituraAux],
+                                                self.post.identificadorEsquerda,
                                                 destinoEscrita)
                                 self.post.adicionarDesvio(desvio)
+                else:
+                    desvio = Desvio(vetorLeiturasAux[letraLeituraAux],
+                                    self.post.identificadorEsquerda,
+                                    self.post.rejeicao)
+                    self.post.adicionarDesvio(desvio)
+        
         return leituraBase
     
     # retorna a primeira transicao encontrada que ainda nao foi transformada em POST
@@ -179,12 +220,21 @@ class Conversor:
         return None
         
     def incrementarContador(self):
+        if(self.contadorID == 5):
+            print("AUMENTOU PRA 6")
         self.contadorID += 1
 
     def equivalenteTuring(self, destinoEscrita):
         for estado in self.turing.estados:
             if(self.turing.estados[estado].equivalentePost.id == destinoEscrita.id):
                 return self.turing.estados[estado]
+
+    def buscaDesvioPorDestino(self, destino):
+        for d in self.post.desvios:
+            if (d.destino.id == destino.id):
+                return d
+            
+        return None
         
 
 

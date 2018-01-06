@@ -17,10 +17,8 @@ class Post:
     
     def __init__(self, alfabeto):
         self.alfabeto = alfabeto
-        print(alfabeto)
         self.alfabeto['#'] = '#'
         # self.alfabeto[self.identificadorEsquerda] = self.identificadorEsquerda
-        self.partida = '0'
         self.leituras = {}
         self.escritas = {}
         self.desvios = []
@@ -45,4 +43,6 @@ class Post:
                 return
         self.desvios.append(desvio)
         
+    def criaPartida(self, destino):
+        self.partida = ('0', destino.id)
     
