@@ -20,7 +20,7 @@ No caso geral, primeiramente cria-se uma leitura que equivale ao estado. Após t
 Sem dúvidas o movimento é uma peça chave nessa 	transformação e, com toda a certeza, o movimento para a esquerda é o maior desafio da mesma, afinal, o movimento para a direita é praticamente natural, já que a fita se move para a direita. 
 Contudo, para gerar o movimento à esquerda é necessário percorrer a fita toda e parar um símbolo antes do atual. Para isso foi inserido em POST um marcador, para identificar que o símbolo anterior ao marcador é o símbolo que será lido após percorrer toda a fita.
 Isso significa que quando o marcador for lido o símbolo anterior ao mesmo também já o terá sido. Com isso, o final do movimento à esquerda já se mescla com o inicio da leitura do estado ao qual a transição leva.
-Para tratar esses problemas crimaos uma estrutura semalhante à imagem presente no ANEXO_1 para todas as transições para a esquerda.
+Para tratar esses problemas crimaos uma estrutura semalhante à imagem presente no ANEXO_1.jpg para todas as transições para a esquerda.
 Vemos neste anexo que, após identificado o movimento a esquerda insere-se o símbolo '&' (identificador utilizado como exemplo) e, após isto, escreve-se um símbolo qualquer que pertence ao alfabeto (este seria o símbolo que deveria ser escrito pela transição). Após isso cria-se uma leitura para cada símbolo presente no alfabeto e, para cada desvio gerado nessa leitura segue-se os seguintes passos:
 	1 - Cria-se, para cada símbolo do alfabeto, uma leitura e, em 		seguida, uma escrita do símbolo símbolo lido anteriormentea esses 		passos.
 	2 - O destino dessa leitura será a leitura (crianda anteriormente a 		esses passos) cujo símbolo é o mesmo que o do desvio que chegou a 		essa escrita.
