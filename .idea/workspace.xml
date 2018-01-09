@@ -2,25 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0614a18a-7eb6-472d-917e-c2c5fd15fd9c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/arquivos/entradas/entrada5" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/arquivos/saidas/saida5" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/arquivos/entradas/entrada1" afterPath="$PROJECT_DIR$/arquivos/entradas/entrada1" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/arquivos/entradas/entrada2" afterPath="$PROJECT_DIR$/arquivos/entradas/entrada2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/arquivos/entradas/entrada3" afterPath="$PROJECT_DIR$/arquivos/entradas/entrada3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/arquivos/entradas/entrada4" afterPath="$PROJECT_DIR$/arquivos/entradas/entrada4" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/arquivos/exemplo-de-entrada.txt" afterPath="$PROJECT_DIR$/arquivos/exemplo-de-entrada.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/arquivos/exemplo-de-saida.txt" afterPath="$PROJECT_DIR$/arquivos/exemplo-de-saida.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/arquivos/saidas/saida1" afterPath="$PROJECT_DIR$/arquivos/saidas/saida1" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/arquivos/saidas/saida2" afterPath="$PROJECT_DIR$/arquivos/saidas/saida2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/arquivos/saidas/saida3" afterPath="$PROJECT_DIR$/arquivos/saidas/saida3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/arquivos/saidas/saida4" afterPath="$PROJECT_DIR$/arquivos/saidas/saida4" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codigo/Main.py" afterPath="$PROJECT_DIR$/codigo/Main.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codigo/classes/Conversor.py" afterPath="$PROJECT_DIR$/codigo/classes/Conversor.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codigo/classes/Escritor.py" afterPath="$PROJECT_DIR$/codigo/classes/Escritor.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codigo/classes/post/Leitura.py" afterPath="$PROJECT_DIR$/codigo/classes/post/Leitura.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codigo/classes/post/Post.py" afterPath="$PROJECT_DIR$/codigo/classes/post/Post.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codigo/classes/turing/Turing.py" afterPath="$PROJECT_DIR$/codigo/classes/turing/Turing.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,8 +17,8 @@
       <file leaf-file-name="Conversor.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/codigo/classes/Conversor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="76" column="12" lean-forward="false" selection-start-line="71" selection-start-column="12" selection-end-line="76" selection-end-column="12" />
+            <state relative-caret-position="18">
+              <caret line="71" column="34" lean-forward="false" selection-start-line="71" selection-start-column="34" selection-end-line="71" selection-end-column="34" />
               <folding>
                 <element signature="e#0#85#0" expanded="true" />
               </folding>
@@ -56,7 +39,7 @@
       <file leaf-file-name="Main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/codigo/Main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
+            <state relative-caret-position="396">
               <caret line="29" column="8" lean-forward="false" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
               <folding>
                 <element signature="e#24#34#0" expanded="true" />
@@ -78,7 +61,7 @@
       <file leaf-file-name="Post.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/codigo/classes/post/Post.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
+            <state relative-caret-position="612">
               <caret line="38" column="8" lean-forward="false" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="8" />
               <folding>
                 <element signature="e#0#46#0" expanded="true" />
@@ -90,7 +73,7 @@
       <file leaf-file-name="Turing.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/codigo/classes/turing/Turing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
+            <state relative-caret-position="990">
               <caret line="58" column="40" lean-forward="false" selection-start-line="58" selection-start-column="40" selection-end-line="58" selection-end-column="40" />
               <folding />
             </state>
@@ -196,7 +179,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="715" />
     <option name="y" value="24" />
     <option name="width" value="651" />
@@ -220,7 +203,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -263,6 +245,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -328,8 +311,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="715" y="24" width="1303" height="780" extended-state="6" />
-    <editor active="true" />
+    <frame x="715" y="24" width="1303" height="780" extended-state="7" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24980783" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -419,7 +401,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="5" column="33" lean-forward="false" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -488,7 +469,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="5" column="33" lean-forward="true" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -657,7 +637,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="5" column="33" lean-forward="false" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -679,7 +658,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/codigo/classes/turing/Turing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
+        <state relative-caret-position="990">
           <caret line="58" column="40" lean-forward="false" selection-start-line="58" selection-start-column="40" selection-end-line="58" selection-end-column="40" />
           <folding />
         </state>
@@ -687,7 +666,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/codigo/Main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
+        <state relative-caret-position="396">
           <caret line="29" column="8" lean-forward="false" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
           <folding>
             <element signature="e#24#34#0" expanded="true" />
@@ -713,7 +692,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/codigo/classes/post/Post.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
+        <state relative-caret-position="612">
           <caret line="38" column="8" lean-forward="false" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="8" />
           <folding>
             <element signature="e#0#46#0" expanded="true" />
@@ -723,8 +702,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/codigo/classes/Conversor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="76" column="12" lean-forward="false" selection-start-line="71" selection-start-column="12" selection-end-line="76" selection-end-column="12" />
+        <state relative-caret-position="18">
+          <caret line="71" column="34" lean-forward="false" selection-start-line="71" selection-start-column="34" selection-end-line="71" selection-end-column="34" />
           <folding>
             <element signature="e#0#85#0" expanded="true" />
           </folding>
