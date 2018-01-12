@@ -1,9 +1,6 @@
 ﻿
  # Turing-Post
-Desenvolvido por:    
-    -Arthur Henrique Sousa Cruz
-    -Pedro Silveira Lopes
-    -João Pedro Teodoro Silva
+	Desenvolvido por: Arthur Henrique Sousa Cruz; Pedro Silveira Lopes; João Pedro Teodoro Silva
    
 
 Programa que converte uma máquina de Turing para uma máquina de Post
