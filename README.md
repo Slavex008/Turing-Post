@@ -1,6 +1,6 @@
 ﻿
  # Turing-Post
-->Desenvolvido por:
+Desenvolvido por:    
     -Arthur Henrique Sousa Cruz
     -Pedro Silveira Lopes
     -João Pedro Teodoro Silva
